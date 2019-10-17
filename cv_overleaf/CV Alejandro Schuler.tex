@@ -1,0 +1,47 @@
+
+% @brief    LaTeX2e Resume for Alejandro Schuler
+\documentclass[resmargin,line]{resume}
+\usepackage[dvipsnames,svgnames,x11names,hyperref]{xcolor}
+\usepackage{comment}
+\usepackage[margin=0.5in, right=1.5in]{geometry}
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{siderule}[1][]{blanker, breakable, 
+     left=3mm, right=3mm, top=1mm, bottom=1mm,
+     borderline vertical={1pt}{0pt}{black},
+     before upper=\indent, parbox=false, #1}
+     
+\usepackage{mdframed}
+
+\newmdenv[
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  skipabove=\topsep,
+  skipbelow=\topsep
+]{siderule2}
+
+\usepackage{hyperref}
+
+\hypersetup{
+  linkcolor  = blue,
+  citecolor  = red,
+  urlcolor   = NavyBlue,
+  colorlinks = true,
+}
+
+\begin{document}
+\name{\Large Alejandro Schuler\normalsize \hspace{97mm}}
+\begin{resume}
+
+\input{cv_overleaf/contact.tex}
+\input{cv_overleaf/education.tex}
+\input{publications.tex}
+\input{software.tex}
+\input{cv_overleaf/experience.tex}
+\input{cv_overleaf/service.tex}
+\input{cv_overleaf/teaching.tex}
+\input{cv_overleaf/awards.tex}
+
+\end{resume}
+\end{document}
